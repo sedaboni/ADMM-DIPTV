@@ -12,3 +12,12 @@ In the last decades, unsupervised deep learning based methods have caught resear
 The code of this paper is built upon the [Deep Image Prior](https://github.com/DmitryUlyanov/deep-image-prior) repository created by Dimitry Ulyanov et al.
 # Citing
 Please consider to cite ADMM-DIPTV if you find it helpful.
+
+```BibTex
+ @article{cascarano2020admm,
+  title={ADMM-DIPTV: combining Total Variation and Deep Image Prior for image restoration},
+  author={Cascarano, Pasquale and Sebastiani, Andrea and Comes, Maria Colomba},
+  journal={arXiv preprint arXiv:2009.11380},
+  year={2020}
+}
+ ```
