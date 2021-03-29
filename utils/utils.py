@@ -110,8 +110,7 @@ def gaussian_kernel(radius, sigma):
     return kernel
 
 def D(x, Dh_DFT, Dv_DFT):
-    x_DFT = torch.rfft(x, signal_ndim=1, onesided=False)
-    x_DFT = torch.view_as_complex(x_DFT).cuda()
-    Dh_x = torch.irfft(torch.view_as_real(Dh_DFT*x_DFT), signal_ndim=1, onesided=False)
-    Dv_x = torch.irfft(torch.view_as_real(Dv_DFT*x_DFT), signal_ndim=1, onesided=False)
+    x_DFT = torch.fft.fft2(x, dim=(-2,-1)).cuda()
+    Dh_x = torch.fft.ifft2(Dh_DFT*x_DFT, dim=(-2,-1)).real
+    Dv_x = torch.fft.ifft2(Dv_DFT*x_DFT, dim=(-2,-1)).real
     return Dh_x, Dv_x
