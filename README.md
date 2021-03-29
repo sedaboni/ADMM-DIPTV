@@ -7,7 +7,7 @@ In the last decades, unsupervised deep learning based methods have caught resear
 
 ## Image Denoising
 <center>
-<img src="figs/noisy.png" width="200px"/> <img src="figs/dip.png" width="200px"/> <img src="figs/dip-wtv.png" width="200px"/>
+<img src="figs/noisy.png" width="200px"/><img src="figs/dip.png" width="200px"/><img src="figs/dip-wtv.png" width="200px"/>
 </center>
 
 ## Credits
