@@ -9,7 +9,7 @@ In the last decades, unsupervised deep learning based methods have caught resear
 <img src="figs/noisy.png" width="200px"/><img src="figs/dip.png" width="200px"/><img src="figs/dip-tv.png" width="200px"/><img src="figs/dip-wtv.png" width="200px"/>
 
 ## CT enhancement
-<img src="figs/chest-CT.png" width="200px"/>
+<img src="figs/chest-CT.PNG" width="200px"/>
 
 ## Credits
 The code of this paper is built upon the [Deep Image Prior](https://github.com/DmitryUlyanov/deep-image-prior) repository created by Dimitry Ulyanov et al.
