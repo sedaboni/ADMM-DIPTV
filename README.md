@@ -17,10 +17,12 @@ The code of this paper is built upon the [Deep Image Prior](https://github.com/D
 Please consider to cite ADMM-DIPTV if you find it helpful.
 
 ```BibTex
-@article{cascarano2021combining,
-      title={Combining Weighted Total Variation and Deep Image Prior for natural and medical image restoration via ADMM},
-      author={Pasquale Cascarano and Andrea Sebastiani and Maria Colomba Comes and Giorgia Franchini and Federica Porta},
-      year={2021},
-      journal={arXiv preprint arXiv:2009.11380},
+@inproceedings{cascarano2021combining,
+  title={Combining weighted total variation and deep image prior for natural and medical image restoration via ADMM},
+  author={Cascarano, Pasquale and Sebastiani, Andrea and Comes, Maria Colomba and Franchini, Giorgia and Porta, Federica},
+  booktitle={2021 21st International Conference on Computational Science and Its Applications (ICCSA)},
+  pages={39--46},
+  year={2021},
+  organization={IEEE}
 }
  ```
