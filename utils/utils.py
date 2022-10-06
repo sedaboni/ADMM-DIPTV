@@ -114,3 +114,26 @@ def D(x, Dh_DFT, Dv_DFT):
     Dh_x = torch.fft.ifft2(Dh_DFT*x_DFT, dim=(-2,-1)).real
     Dv_x = torch.fft.ifft2(Dv_DFT*x_DFT, dim=(-2,-1)).real
     return Dh_x, Dv_x
+
+def norm2_loss(x):
+    '''Calculates euclidean loss for an image `x`.
+        
+    Args:
+        x: image, torch.Variable of torch.Tensor
+    '''
+    vec = torch.pow(x[:,:,:,:], 2)
+    
+    return torch.sum(vec)
+
+def tvalfa_loss(x, beta = 0.5, alfa=0.000001):
+    '''Calculates TV loss for an image `x`.
+        
+    Args:
+        x: image, torch.Variable of torch.Tensor
+        beta: See https://arxiv.org/abs/1412.0035 (fig. 2) to see effect of `beta` 
+        alpha: smoothing parameter 
+    '''
+    dh = torch.pow(x[:,:,:,1:] - x[:,:,:,:-1], 2)
+    dw = torch.pow(x[:,:,1:,:] - x[:,:,:-1,:], 2)
+    
+    return torch.sum(torch.pow(dh[:, :, :-1] + dw[:, :, :, :-1] + alfa , beta))
